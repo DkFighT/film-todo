@@ -361,6 +361,10 @@ body{
         --elheight:5vmax;
         --font16:2vmax;
     }
+    body{
+        min-width: 280px;
+        max-height: 100vh;
+    }
     .left-bar{
         display: none;
     }
@@ -387,6 +391,8 @@ body{
     .row-status{
         box-shadow: none;
         width: 30%;
+        min-width: 65px;
+        min-height: var(--elheight);
     }
     .row-score{
         min-width: var(--elheight);
