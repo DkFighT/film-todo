@@ -285,6 +285,7 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-weight: bold;
 }
 .row-comment{
     width: var(--elheight);
@@ -315,4 +316,89 @@ body{
     color: var(--color3);
     font-weight: bold;
     background-color: var(--color2);
+    -webkit-appearance: none;
+}
+.mobile-header{
+    width: 100%;
+    height: 8vmax;
+    border-bottom: solid 1px var(--color4);
+    display: none;
+}
+.app-name{
+    color: var(--color2);
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.bottom-menu{
+    width: 100%;
+    height: 8vmax;
+    display: none;
+}
+.mobile-btn{
+    min-width: var(--elheight);
+    min-height: var(--elheight);
+    border: 1px solid var(--color4);
+    border-radius: var(--radius10);
+}
+.mobile-list-name{
+    width: 35%;
+    height: 80%;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-color: var(--color6);
+    color: var(--color3);
+    border-radius: var(--radius10);
+    font-size: var(--font16);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media screen and (orientation: portrait)
+{   
+    :root{
+        --elheight:5vmax;
+        --font16:2vmax;
+    }
+    .left-bar{
+        display: none;
+    }
+    .search-up-panel{
+        display: none;
+    }
+    .add-point{
+        display: none;
+    }
+    .row-name{
+        width: 75%;
+        box-shadow: none;
+    }
+    .point-row{
+        margin-top: 5px;
+    }
+    .bottom-menu{
+        display: flex;
+    }
+    .row-comment{
+        display: none;
+        box-shadow: none;
+    }
+    .row-status{
+        box-shadow: none;
+        width: 30%;
+    }
+    .row-score{
+        min-width: var(--elheight);
+        min-height: var(--elheight);
+        box-shadow: none;
+    }
+    .mobile-header{
+        display: flex;
+    }
+    .green-btn{
+        box-shadow: none;
+        min-width: var(--elheight);
+        min-height: var(--elheight);
+    }
 }
