@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>List</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="content">
+        <div class="display-col-cent-spbetw left-bar">
+            <div class="display-row-cent-center login-left-block line">
+                <div class="display-row-cent-center name-ava-left">
+                    <img src="" alt="ava" class="ava-img">
+                    <span class="font-bold-24 font-col-1">Login/Name</span>
+                </div>
+            </div>
+            <div class="display-col-start-start lists">
+                <form onsubmit="return false;" name="menu"></form>
+                <div class="display-row-cent-center none-active-point active-point">
+                    <span class="font-bold-16">Anime</span>
+                    <input type="radio" name="point" checked form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16 font-col-1">Films</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16 font-col-1">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+            </div>
+            <div class="white-btn text-center medium-size">Add List+</div>
+        </div>
+        <div class="display-row-cent-center main-field" id="main-field">
+            <div class="display-col-cent-spbetw main-placement-field">
+                <div class="display-row-cent-spbetw search-up-panel">
+                    <form onsubmit="return false;" name="search" id="search" class="display-row-cent-spbetw">
+                        <input type="text" name="search_field" id="search-field" placeholder="Search...">
+                        <button type="submit"></button>
+                    </form>
+                    <div class="display-row-cent-spbetw list-params">
+                        <div class="list-name" id="list-name">Anime</div>
+                        <div class="share text-center green-btn" id="share-btn">Share</div>
+                        <div class="list-edit text-center green-btn" id="list-edit">...</div>
+                    </div>
+                </div>
+                <div class="display-col-start-start lists">
+                    <div class="display-row-cent-spbetw point-row">
+                        <div class="white-btn row-name"><input type="text" name="point-name" id="point-name"></div>
+                        <div class="white-btn row-comment"></div>
+                        <div class="white-btn row-score"><select name="score" id="score" class="score">
+                                <option value="10">10</option>
+                                <option value="9">9</option>
+                                <option value="8">8</option>
+                                <option value="7">7</option>
+                                <option value="6">6</option>
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1">1</option>
+                            </select></div>
+                        <div class="white-btn row-status">
+                            <select name="status" id="status" class="score">
+                                <option value="буду">В планах</option>
+                                <option value="смотрю">Смотрю</option>
+                                <option value="оконченно">Оконченно</option>
+                                <option value="хз">Хз</option>
+                                <option value="удалить">Удалить</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="display-row-cent-center add-point"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
