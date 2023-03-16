@@ -279,7 +279,7 @@ body{
     padding-right: var(--gap15);
     outline: none;
     border: none;
-    background-color: none;
+    background-color: var(--color2);
     font-size: var(--font16);
     color: var(--color3);
     overflow: hidden;
@@ -298,19 +298,21 @@ body{
 .row-score{
     height: var(--elheight);
     width: var(--elheight);
+    overflow: hidden;
 }
 .row-status{
     height: var(--elheight);
     width: 150px;
+    overflow: hidden;
 }
 .score{
     height: 100%;
     width: 100%;
     border: none;
     outline: none;
-    background: transparent;
     text-align: center;
     font-size: var(--font16);
     color: var(--color3);
     font-weight: bold;
+    background-color: var(--color2);
 }
