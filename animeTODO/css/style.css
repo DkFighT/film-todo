@@ -18,9 +18,11 @@ html.theme-1{
     --color4: #5BA199;
     --color5: #EDEDED;
     --color6: #A7BDC0;
-    --searchimg: url(../resources/search.png);
-    --plusimg: url(../resources/plus.png);
-    --commentimg: url(../resources/comment.png);
+    --searchimg: url(../resources/search1.png);
+    --commentimg: url(../resources/comment1.png);
+    --optionimg: url(../resources/option1.png);
+    --shareimg: url(../resources/share1.png);
+    --userimg: url(../resources/user1.png);
 }
 body{
     font-family: 'Inter', sans-serif;
@@ -151,7 +153,7 @@ body{
 .medium-size{
     font-size: var(--font16);
 }
-.white-btn:hover{
+.white-btn-anim:hover{
     background-color: var(--color1);
     color: var(--color2);
     font-weight: bold;
@@ -252,6 +254,9 @@ body{
     right: 0;
     z-index: 50;
     transition: all .1s ease-in-out;
+    color: var(--color3);
+    font-size: var(--font24);
+    font-weight: bold;
 }
 .add-point:hover{
     background-color: var(--color2);
@@ -271,12 +276,14 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    background-color: var(--color2);
 }
 .row-name input{
     height: 100%;
     width: calc(100% - 2 * var(--gap15));
-    padding-left: var(--gap15);
-    padding-right: var(--gap15);
+    box-sizing: border-box;
+    margin-left: var(--gap15);
+    margin-right: var(--gap15);
     outline: none;
     border: none;
     background-color: var(--color2);
@@ -300,11 +307,15 @@ body{
     height: var(--elheight);
     width: var(--elheight);
     overflow: hidden;
+    background-color: var(--color2);
+    box-sizing: border-box;
 }
 .row-status{
     height: var(--elheight);
     width: 150px;
     overflow: hidden;
+    background-color: var(--color2);
+    box-sizing: border-box;
 }
 .score{
     height: 100%;
@@ -317,11 +328,9 @@ body{
     font-weight: bold;
     background-color: var(--color2);
     -webkit-appearance: none;
+    box-sizing: border-box;
 }
 .mobile-header{
-    width: 100%;
-    height: 8vmax;
-    border-bottom: solid 1px var(--color4);
     display: none;
 }
 .app-name{
@@ -331,14 +340,12 @@ body{
     font-weight: bold;
 }
 .bottom-menu{
-    width: 100%;
-    height: 8vmax;
     display: none;
 }
 .mobile-btn{
     min-width: var(--elheight);
     min-height: var(--elheight);
-    border: 1px solid var(--color4);
+    /* border: 1px solid var(--color4); */
     border-radius: var(--radius10);
 }
 .mobile-list-name{
@@ -354,6 +361,40 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.user{
+    background: var(--userimg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-color: var(--color6);
+}
+.plus{
+    font-weight: bold;
+    color: var(--color3);
+    font-size: var(--font16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-bottom{
+    background: var(--searchimg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+.share-bottom{
+    background: var(--shareimg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+}
+.option{
+    background: var(--optionimg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-color: var(--color6);
 }
 @media screen and (orientation: portrait)
 {   
@@ -379,10 +420,19 @@ body{
         box-shadow: none;
     }
     .point-row{
-        margin-top: 5px;
+        width: calc(100% - 10px);
+        padding: 0 5px 0 5px;
+        height: var(--elheight);
+        gap: 5px;
     }
     .bottom-menu{
         display: flex;
+        width: 100%;
+        height: 8vmax;
+        margin-top: auto;
+        flex-shrink: 0;
+        position: sticky;
+        bottom: 0px;
     }
     .row-comment{
         display: none;
@@ -395,16 +445,33 @@ body{
         min-height: var(--elheight);
     }
     .row-score{
-        min-width: var(--elheight);
+        min-width: 80px;
         min-height: var(--elheight);
         box-shadow: none;
     }
+    .lists{
+        width: 100%;
+        height: calc(100vh - 16vmax);
+        position: relative;
+        gap: var(--gap15);
+        overflow: auto;
+        z-index: 20;
+    }
     .mobile-header{
         display: flex;
+        width: 100%;
+        height: 8vmax;
+        border-bottom: solid 1px var(--color4);
     }
     .green-btn{
         box-shadow: none;
         min-width: var(--elheight);
         min-height: var(--elheight);
+    }
+}
+@media screen and (max-height: 500px)
+{  
+    :root{
+        --elheight: 30px;
     }
 }
