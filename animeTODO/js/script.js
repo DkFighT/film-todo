@@ -78,11 +78,7 @@ function handleTouchMove(event){
 }
 
 // Изменение высоты
-function changeHeight(){
-    document.documentElement.style.cssText = `--allscreen: ${window.innerHeight}px`;
-    window.scrollTo(0,1);
-    // console.log(window.screen.availHeight);
-    // console.log(window.outerHeight);
-    // console.log(document.documentElement.clientHeight);
-}
-changeHeight();
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--allscreen', `${vh}px`);
+  });
