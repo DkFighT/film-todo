@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-1">
+<html lang="en" class="theme-1" id="html">
 
 <head>
     <meta charset="UTF-8">
@@ -10,40 +10,114 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <script src="../js/script.js" module></script>
+    <script src="../js/script.js" type="module"></script>
 </head>
 
 <body>
-    <div class="content">
-        <div class="display-col-cent-spbetw left-bar">
+    <div class="content" id="content">
+        <!-- Леваое меню/нижнее меню под мобилку -->
+        <div class="display-col-cent-spbetw left-bar" id="left-bar">
             <div class="display-row-cent-center login-left-block line">
                 <div class="display-row-cent-center name-ava-left">
                     <img src="" alt="ava" class="ava-img">
                     <span class="font-bold-24 font-col-1">Login/Name</span>
                 </div>
             </div>
-            <div class="display-col-start-start lists">
+            <div class="display-col-start-start lists" id="menu">
                 <form onsubmit="return false;" name="menu"></form>
                 <div class="display-row-cent-center none-active-point active-point">
                     <span class="font-bold-16">Anime</span>
                     <input type="radio" name="point" checked form="menu">
                 </div>
                 <div class="display-row-cent-center none-active-point">
-                    <span class="font-bold-16 font-col-1">Films</span>
+                    <span class="font-bold-16">Films</span>
                     <input type="radio" name="point" form="menu">
                 </div>
                 <div class="display-row-cent-center none-active-point">
-                    <span class="font-bold-16 font-col-1">Serials</span>
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
+                    <input type="radio" name="point" form="menu">
+                </div>
+                <div class="display-row-cent-center none-active-point">
+                    <span class="font-bold-16">Serials</span>
                     <input type="radio" name="point" form="menu">
                 </div>
             </div>
-            <div class="white-btn text-center medium-size white-btn-anim">Add List+</div>
+            <div class="white-btn text-center medium-size white-btn-anim btn-add-list">Add List+</div>
         </div>
         <div class="display-row-cent-center main-field" id="main-field">
             <div class="display-col-cent-spbetw main-placement-field">
+<!-- МЕНЮШКА НА ТРИ ТОЧКИ -->
+                    <div class="display-col-cent-around edit-menu" id="edit-menu">
+                        <div class="edit-menu-block" id="rename"><div class="editlist"></div>Rename list</div>
+                        <div class="edit-menu-block" id="sort"><div class="sortlist"></div>Sort by</div>
+                        <div class="display-row-cent-center wrap-themes">
+                            <div class="num-theme" id="1"></div>
+                            <div class="num-theme" id="2"></div>
+                            <div class="num-theme" id="3"></div>
+                            <div class="num-theme" id="4"></div>
+                            <div class="num-theme" id="5"></div>
+                            <div class="num-theme" id="6"></div>
+                            <div class="num-theme" id="7"></div>
+                            <div class="num-theme" id="8"></div>
+                            <div class="num-theme" id="9"></div>
+                        </div>
+                        <div class="edit-menu-block" id="del"><img src="../resources/trash.png">Delete list</div>
+                    </div>
                 <div class="display-row-cent-spbetw mobile-header">
                     <span class="app-name">AppName</span>
-                    <div class="list-edit green-btn option"></div>
+                    <div class="list-edit green-btn option e" id="list-edit"></div>
                 </div>
                 <div class="display-row-cent-spbetw search-up-panel">
                     <form onsubmit="return false;" name="search" id="search" class="display-row-cent-spbetw">
@@ -53,10 +127,10 @@
                     <div class="display-row-cent-spbetw list-params">
                         <div class="list-name" id="list-name">Anime</div>
                         <div class="share text-center green-btn" id="share-btn">Share</div>
-                        <div class="list-edit text-center green-btn" id="list-edit">...</div>
+                        <div class="list-edit text-center green-btn e" id="list-edit">...</div>
                     </div>
                 </div>
-                <div class="display-col-start-start lists">
+                <div class="display-col-start-start lists" id="lists">
                     <div class="display-row-cent-spbetw point-row">
                         <div class="white-btn row-name"><input type="text" name="point-name" value="Клинок рассекающий демонов" id="point-name" readonly></div>
                         <div class="white-btn row-comment"></div>
@@ -85,13 +159,17 @@
                 </div>
                 <div class="display-row-cent-spbetw bottom-menu">
                     <div class="list-edit green-btn user"></div>
-                    <div class="list-edit mobile-btn share-bottom"></div>
-                    <div class="display-row-cent-center mobile-list-name">Anime</div>
+                    <div class="list-edit mobile-btn share-bot"></div>
+                    <div class="display-row-cent-center mobile-list-name" id="mobile-name-list">Anime</div>
                     <div class="list-edit mobile-btn search-bottom"></div>
                     <div class="list-edit green-btn plus">+</div>
                 </div>
                 <div class="display-row-cent-center add-point">+</div>
             </div>
+        </div>
+        <!-- DIALOG WINDOW -->
+        <div class="display-row-cent-center dialog" id="dialog">
+            <div class="display-col-cent-around dialog-frame" id="dialog-frame"></div>
         </div>
     </div>
 </body>
