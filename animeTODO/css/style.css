@@ -10,6 +10,7 @@
     --radius10: 10px;
     --shadow1: 3px 3px 7px rgba(0, 0, 0, .3);
     --elheight: 50px;
+    --allscreen: 100vh;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
@@ -87,7 +88,7 @@ body {
 }
 
 .content {
-    height: 100vh;
+    height: var(--allscreen);
     width: 100%;
     display: flex;
     position: relative;
@@ -131,7 +132,7 @@ body {
 }
 
 .left-bar {
-    height: calc(100vh - 2 * var(--gap15));
+    height: calc(var(--allscreen) - 2 * var(--gap15));
     width: 15vmax;
     padding-top: var(--gap15);
     padding-bottom: var(--gap15);
@@ -250,7 +251,7 @@ body {
 
 .main-field {
     width: 85vmax;
-    height: 100vh;
+    height: var(--allscreen);
 }
 
 .main-placement-field {
@@ -655,13 +656,13 @@ body {
 
     body {
         min-width: 280px;
-        max-height: 100vh;
+        max-height: var(--allscreen);
     }
 
     /* был левый стал нижний бар */
     .left-bar {
         display: flex;
-        height: calc(100vh - 3 * var(--gap15));
+        height: calc(var(--allscreen) - 3 * var(--gap15));
         width: 100%;
         padding-top: calc(2 * var(--gap15));
         padding-bottom: var(--gap15);
@@ -755,7 +756,7 @@ body {
 
     .lists {
         width: 100%;
-        height: calc(100vh - 16vmax);
+        height: calc(var(--allscreen) - 16vmax);
         position: relative;
         gap: var(--gap15);
         overflow: auto;
