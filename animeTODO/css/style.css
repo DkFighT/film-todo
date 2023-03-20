@@ -10,12 +10,7 @@
     --radius10: 10px;
     --shadow1: 3px 3px 7px rgba(0, 0, 0, .3);
     --elheight: 50px;
-}
-html{
     --allscreen: 100vh;
-}
-body{
-    height: var(--allscreen);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
