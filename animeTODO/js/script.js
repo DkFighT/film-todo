@@ -76,3 +76,8 @@ function handleTouchMove(event){
     x = null;
     y = null;
 }
+window.onload = function() {
+    // document.documentElement.style.height = window.outerHeight + 'px';
+    document.documentElement.style.cssText = `--allscreen: ${window.innerHeight}px`;
+    setTimeout(window.scrollTo(0, 1), 10);
+}
