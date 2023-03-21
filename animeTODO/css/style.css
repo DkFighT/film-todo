@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+html{
+    --allscreen: 100vh;
+}
 :root {
     --gap15: 15px;
     --font24: 1.5vmax;
@@ -10,7 +12,7 @@
     --radius10: 10px;
     --shadow1: 3px 3px 7px rgba(0, 0, 0, .3);
     --elheight: 50px;
-    --allscreen: 100vh;
+    
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
