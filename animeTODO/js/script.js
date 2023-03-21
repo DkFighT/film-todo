@@ -82,7 +82,7 @@ window.onload = function() {
     setTimeout(window.scrollTo(0, 1), 10);
 }
 
-// window.addEventListener('resize', ()=>{
-//     document.documentElement.style.cssText = `--allscreen: ${window.innerHeight}px`;
-//     setTimeout(window.scrollTo(0, 1), 10);
-// })
+window.addEventListener('resize', ()=>{
+    document.documentElement.style.cssText = `--allscreen: ${window.innerHeight}px`;
+    setTimeout(window.scrollTo(0, 1), 10);
+})
