@@ -12,7 +12,6 @@ html{
     --radius10: 10px;
     --shadow1: 3px 3px 7px rgba(0, 0, 0, .3);
     --elheight: 50px;
-    
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
@@ -645,11 +644,105 @@ body {
     gap: var(--gap15);
     height: var(--elheight);
 }
+.form-content
+{
+        height: var(--allscreen);
+        width: 100%;
+        display: flex;
+        position: relative;
+        background-color: var(--left-panel);
+        overflow: hidden;
+}
+.form-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+    width: 50vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    animation: appear .5s linear;
+    background-color: var(--right-panel);
+}
+
+.login-form {
+    height: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login-form input {
+    font-size: var(--font16);
+    height: 40px;
+    width: 60%;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    color: var(--font);
+    background-color: var(--point);
+}
+
+.login-form input::placeholder {
+    color: var(--font);
+}
+
+.login-form input:focus {
+    width: 75%;
+}
+
+.blue-button {
+    background-color: var(--font);
+    border-radius: 4px;
+    color: var(--fontactpoint);
+    border: none;
+    transition: all .1s ease;
+}
+
+.blue-button:hover {
+    background-color: var(--btn);
+    color: var(--font);
+}
+
+.account-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.03em;
+    color: var(--fontactpoint);
+    height: 42px;
+    width: 96px;
+}
+
+.log{
+    color:var(--font);
+    font-size: var(--font24);
+}
+
+.form-link{
+    text-decoration: none;
+    color: var(--font);
+    border-bottom: 1px solid var(--stroke);
+}
 
 @media screen and (orientation: portrait) {
     :root {
         --elheight: 5vmax;
         --font16: 2vmax;
+        --font24: 3vmax;
     }
 
     .dialog-frame {
@@ -776,6 +869,7 @@ body {
         box-shadow: none;
         min-width: var(--elheight);
         min-height: var(--elheight);
+        line-height: var(--elheight);
     }
 
     .edit-menu {
@@ -787,14 +881,56 @@ body {
     .wrap-themes {
         width: calc(var(--elheight) * 4.5);
     }
-}
 
-@media screen and (max-height:500px) {
-    :root {
-        --elheight: 30px;
+    .form-link{
+        font-size: var(--font16);
+        text-align: center;
+        width: 70%;
     }
 
+    .form-block {
+        height: 60%;
+        width: 80%;
+    }
+
+    .login-form input {
+        width: 70%;
+    }
+
+    .login-form input:focus {
+        width: 85%;
+    }
+
+    .account-btn {
+        height: var(--elheight);
+        width: calc(var(--elheight) * 2);
+    }
+}
+
+@media screen and (max-height:600px) {
+    :root {
+        --elheight: 30px;
+        --elheightform: 20px;
+    }
     .edit-menu {
         height: calc(var(--elheight) * 8);
+    }
+    .login-form input {
+        height: var(--elheightform);
+        width: 70%;
+    }
+    .form-block {
+        height: 80%;
+        width: 60%;
+    }
+    .login-form {
+        gap: var(--gap15);
+    }
+    .log{
+        font-size: var(--font24);
+    }
+    .account-btn {
+        height: var(--elheight);
+        width: calc(var(--elheight) * 2);
     }
 }

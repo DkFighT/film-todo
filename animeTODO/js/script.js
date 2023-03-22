@@ -1,8 +1,7 @@
 import * as th from './themes.js';
 import * as reqest from './request.js';
 import * as dialog from './dialog.js';
-
-let bd_url = 'https://64022bef302b5d671c34bef5.mockapi.io/api/v1/film';
+import * as load from './load.js';
 
 document.getElementById('lists').onclick = () => { th.rem(); }
 // выбор темы
@@ -16,32 +15,50 @@ document.querySelectorAll('.e').forEach(element => {
     }
 });
 // Меню
+
+export let user_id = '1';
+
+load.loadlists();
+
 export function checkMenu() {
     let menus = document.querySelectorAll('.none-active-point');
+    let names = document.querySelectorAll('#list-name');
+
     for (let i = 0; i < menus.length; i++) {
+
         menus[i].onclick = () => {
             if (menus[i].childNodes[3].checked) {
                 menus.forEach(element => { element.classList.remove('active-point'); });
                 menus[i].classList.add('active-point');
+                names.forEach(name => {
+                    name.textContent = menus[i].innerText;
+                })
+
+                load.loadpoints();
+
                 let menu = document.getElementById('left-bar');
                 menu.style.top = '100%';
             }
         }
     }
 }
-checkMenu();
 
 // кнопки добавления списка
-let btnAddList = document.querySelectorAll('.btn-add-list');
-btnAddList.forEach(element => {
+let btnAddList = document.querySelector('#btn-add-list');
+btnAddList.onclick = () => {
+    dialog.dialogWindow('Имя списка', dialog.addNewList, dialog.cancel);
+}
+
+// кнопки добавления поинта
+document.querySelectorAll('#AddPoint').forEach(element => {
     element.onclick = () => {
-        dialog.dialogWindow('Имя списка', dialog.addNewList, dialog.cancel);
+        dialog.dialogWindow('Название поинта', dialog.addNewPoint, dialog.cancel);
     }
-});
+})
 
 let menu = document.getElementById('left-bar');
 // Прказать нижний список
-document.getElementById('mobile-name-list').onclick = () => {
+document.querySelector('.mobile-list-name').onclick = () => {
     menu.style.top = '0';
 }
 // Скрыть нижнее меню по свайпу
@@ -52,37 +69,34 @@ menu.addEventListener('touchmove', handleTouchMove, false);
 let x = null;
 let y = null;
 
-function handleTouchStart(event){
+function handleTouchStart(event) {
     x = event.touches[0].clientX;
     y = event.touches[0].clientY;
 }
-function handleTouchMove(event){
-    if (!x || !y){
+function handleTouchMove(event) {
+    if (!x || !y) {
         return false;
     }
-
     let new_x = event.touches[0].clientX;
     let new_y = event.touches[0].clientY;
-    
     let xDiff = new_x - x;
     let yDiff = new_y - y;
-
     if (Math.abs(xDiff) < Math.abs(yDiff)) {
         if (yDiff >= 15) {
             menu.style.top = '100%';
         }
     }
-
     x = null;
     y = null;
 }
-window.onload = function() {
+
+window.onload = function () {
     // document.documentElement.style.height = window.outerHeight + 'px';
     document.documentElement.style.cssText = `--allscreen: ${window.innerHeight}px`;
     setTimeout(window.scrollTo(0, 1), 10);
 }
 
-window.addEventListener('resize', ()=>{
+window.addEventListener('resize', () => {
     document.documentElement.style.cssText = `--allscreen: ${window.innerHeight}px`;
     setTimeout(window.scrollTo(0, 1), 10);
 })

@@ -25,7 +25,7 @@
             </div>
             <div class="display-col-start-start lists" id="menu">
                 <form onsubmit="return false;" name="menu"></form>
-                <div class="display-row-cent-center none-active-point active-point">
+                <!-- <div class="display-row-cent-center none-active-point active-point">
                     <span class="font-bold-16">Anime</span>
                     <input type="radio" name="point" checked form="menu">
                 </div>
@@ -36,9 +36,9 @@
                 <div class="display-row-cent-center none-active-point">
                     <span class="font-bold-16">Serials</span>
                     <input type="radio" name="point" form="menu">
-                </div>
+                </div> -->
             </div>
-            <div class="white-btn text-center medium-size white-btn-anim btn-add-list">Add List+</div>
+            <div class="white-btn text-center medium-size white-btn-anim" id="btn-add-list">Add List+</div>
         </div>
         <div class="display-row-cent-center main-field" id="main-field">
             <div class="display-col-cent-spbetw main-placement-field">
@@ -69,13 +69,13 @@
                         <button type="submit"></button>
                     </form>
                     <div class="display-row-cent-spbetw list-params">
-                        <div class="list-name" id="list-name">Anime</div>
+                        <div class="list-name" id="list-name"></div>
                         <div class="share text-center green-btn" id="share-btn">Share</div>
                         <div class="list-edit text-center green-btn e" id="list-edit">...</div>
                     </div>
                 </div>
                 <div class="display-col-start-start lists" id="lists">
-                    <div class="display-row-cent-spbetw point-row">
+                    <!-- <div class="display-row-cent-spbetw point-row">
                         <div class="white-btn row-name"><input type="text" name="point-name" value="Клинок рассекающий демонов" id="point-name" readonly></div>
                         <div class="white-btn row-comment"></div>
                         <div class="white-btn row-score"><select name="score" id="score" class="score">
@@ -84,7 +84,7 @@
                                 <option value="8">8</option>
                                 <option value="7">7</option>
                                 <option value="6">6</option>
-                                <option value="5">5</option>
+                                <option value="5" selected>5</option>
                                 <option value="4">4</option>
                                 <option value="3">3</option>
                                 <option value="2">2</option>
@@ -92,23 +92,23 @@
                             </select></div>
                         <div class="white-btn row-status">
                             <select name="status" id="status" class="score">
-                                <option value="буду">В планах</option>
+                                <option value="буду" selected>В планах</option>
                                 <option value="смотрю">Смотрю</option>
                                 <option value="оконченно">Закончил</option>
                                 <option value="хз">Хз</option>
                                 <option value="удалить">Удалить</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="display-row-cent-spbetw bottom-menu">
                     <div class="list-edit green-btn user"></div>
                     <div class="list-edit mobile-btn share-bot"></div>
-                    <div class="display-row-cent-center mobile-list-name" id="mobile-name-list">Anime</div>
+                    <div class="display-row-cent-center mobile-list-name" id="list-name">Anime</div>
                     <div class="list-edit mobile-btn search-bottom"></div>
-                    <div class="list-edit green-btn plus">+</div>
+                    <div class="list-edit green-btn plus" id="AddPoint">+</div>
                 </div>
-                <div class="display-row-cent-center add-point">+</div>
+                <div class="display-row-cent-center add-point" id="AddPoint">+</div>
             </div>
         </div>
         <!-- DIALOG WINDOW -->
