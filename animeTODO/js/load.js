@@ -32,6 +32,7 @@ export function loadlists() {
 
 export function loadpoints() {
     let listName = document.getElementById('list-name').innerText;
+    listName = listName.replace(/\n/g, '');
     let pointField = document.getElementById('lists');
     pointField.innerHTML = '';
     reqest.getRequest(reqest.bd_url + `/${user_id}`).then(resp => {
