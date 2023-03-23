@@ -1,5 +1,6 @@
 import { checkMenu, user_id } from './script.js';
 import * as reqest from './request.js';
+// import { json } from 'stream/consumers';
 
 // Создание окна
 export function dialogWindow(text, btnfunc, exit) {
@@ -142,6 +143,22 @@ export function addNewPoint() {
             reqest.sendRequest(reqest.bd_url + `/${user_id}`, 'PUT', new_list_array);
         })
 
+        cancel();
+    }
+    else {
+        cancel();
+    }
+}
+
+export function setBgImage() {
+    let imageUrl = document.getElementById('info-field').value;
+    if (imageUrl != '') {
+        localStorage.setItem('bg', JSON.stringify(imageUrl));
+        // подгрузка фона
+        let bg = document.getElementById('main-field');
+        bg.style.background = `url(${localStorage.getItem('bg')})`;
+        bg.style.backgroundPosition = 'center';
+        bg.style.backgroundSize = 'cover';
         cancel();
     }
     else {

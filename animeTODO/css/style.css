@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     --allscreen: 100vh;
 }
+
 :root {
     --gap15: 15px;
     --font24: 1.5vmax;
@@ -85,7 +87,7 @@ html.theme-2 {
 }
 
 html.theme-3 {
-    --right-panel: rgb(29,29,29);
+    --right-panel: rgb(29, 29, 29);
     /*Главная панель*/
     --point: rgb(80, 80, 80);
     /*Строка с названием аниме, коментом и тд + поиск для компьютерной версии*/
@@ -99,15 +101,15 @@ html.theme-3 {
     /*Кнопки в верхней боковой панели*/
     --left-panel: #2b2b2b;
     /*Боковая панель*/
-    --ava: rgb(29,29,29);
+    --ava: rgb(29, 29, 29);
     /*Аватарка*/
-    --activepoint: rgb(29,29,29);
+    --activepoint: rgb(29, 29, 29);
     /*Бг выленного списка*/
     --fontactpoint: #ffffff;
     /*Шрифт выленного списка + бг добавление списка*/
-    --notactive:  rgb(85, 85, 85);
+    --notactive: rgb(85, 85, 85);
     /*Бг не выделенного списка + шрифт не выделенного списка*/
-    --list:  #2b2b2b;
+    --list: #2b2b2b;
     /*Выделение дива на мобилке*/
     --searchimg: url(../resources/search3.png);
     --commentimg: url(../resources/comment3.png);
@@ -116,6 +118,74 @@ html.theme-3 {
     --userimg: url(../resources/user3.png);
     --editimg: url(../resources/edit3.png);
     --sortimg: url(../resources/sort3.png);
+}
+
+html.theme-4 {
+    --right-panel: #5e548e;
+    /*Главная панель*/
+    --point: #231942;
+    /*Строка с названием аниме, коментом и тд + поиск для компьютерной версии*/
+    --font: #e0b1cb;
+    /*Шрифт главной панели*/
+    --stroke: #e0b1cb;
+    /*Подчеркивание в главной и боковой панели + мобилке*/
+    --name: #e0b1cb;
+    /*Название приложения  + название списка в главной области*/
+    --btn: #9f86c0;
+    /*Кнопки в верхней боковой панели*/
+    --left-panel: #231942;
+    /*Боковая панель*/
+    --ava: #9f86c0;
+    /*Аватарка*/
+    --activepoint: #9f86c0;
+    /*Бг выленного списка*/
+    --fontactpoint: #231942;
+    /*Шрифт выленного списка + бг добавление списка*/
+    --notactive: #5e548e;
+    /*Бг не выделенного списка + шрифт не выделенного списка*/
+    --list: #9f86c0;
+    /*Выделение дива на мобилке*/
+    --searchimg: url(../resources/search2.png);
+    --commentimg: url(../resources/comment2.png);
+    --optionimg: url(../resources/option2.png);
+    --shareimg: url(../resources/share2.png);
+    --userimg: url(../resources/user2.png);
+    --editimg: url(../resources/edit2.png);
+    --sortimg: url(../resources/sort2.png);
+}
+
+html.theme-5 {
+    --right-panel: #f8f9fa;
+    /*Главная панель*/
+    --point: #dee2e6;
+    /*Строка с названием аниме, коментом и тд + поиск для компьютерной версии*/
+    --font: #212529;
+    /*Шрифт главной панели*/
+    --stroke: #212529;
+    /*Подчеркивание в главной и боковой панели + мобилке*/
+    --name: #212529;
+    /*Название приложения  + название списка в главной области*/
+    --btn: #ced4da;
+    /*Кнопки в верхней боковой панели*/
+    --left-panel: #e9ecef;
+    /*Боковая панель*/
+    --ava: #6c757d;
+    /*Аватарка*/
+    --activepoint: #ced4da;
+    /*Бг выленного списка*/
+    --fontactpoint: #495057;
+    /*Шрифт выленного списка + бг добавление списка*/
+    --notactive: #dee2e6;
+    /*Бг не выделенного списка + шрифт не выделенного списка*/
+    --list: #ced4da;
+    /*Выделение дива на мобилке*/
+    --searchimg: url(../resources/search.png);
+    --commentimg: url(../resources/comment.png);
+    --optionimg: url(../resources/option.png);
+    --shareimg: url(../resources/share.png);
+    --userimg: url(../resources/user.png);
+    --editimg: url(../resources/edit.png);
+    --sortimg: url(../resources/sort.png);
 }
 
 body {
@@ -192,6 +262,8 @@ body {
 .ava-img {
     min-height: 4rem;
     min-width: 4rem;
+    max-height: 4rem;
+    max-width: 4rem;
     border-radius: 50%;
     background-color: var(--ava);
 }
@@ -473,6 +545,7 @@ body {
     font-weight: bold;
     background-color: var(--point);
     -webkit-appearance: none;
+    appearance: none;
     box-sizing: border-box;
 }
 
@@ -539,7 +612,8 @@ body {
     position: relative;
     z-index: 10;
 }
-.search-bottom input{
+
+.search-bottom input {
     height: calc(100%);
     width: 0;
     /* 35vmin; */
@@ -558,7 +632,8 @@ body {
     outline: none;
     transition: all .2s ease-in-out;
 }
-.active-search{
+
+.active-search {
     background-color: var(--list);
     border-radius: 0 var(--radius10) var(--radius10) 0;
     transition: all .2s ease-in-out;
@@ -594,7 +669,7 @@ body {
     display: none;
 }
 
-.num-theme  {
+.num-theme {
     height: var(--elheight);
     width: var(--elheight);
     border: 1px solid var(--font);
@@ -602,14 +677,32 @@ body {
 }
 
 .num-theme:nth-child(1) {
-    background: linear-gradient(90deg, #BBC6C8 50%,  #469597 50%);
+    background: linear-gradient(90deg, #BBC6C8 50%, #469597 50%);
 }
+
 .num-theme:nth-child(2) {
-    background: linear-gradient(90deg, #e0fbfc 50%,  #5c6b73 50%);
+    background: linear-gradient(90deg, #e0fbfc 50%, #5c6b73 50%);
 }
+
 .num-theme:nth-child(3) {
-    background: linear-gradient(90deg, #e6e0e0 50%, rgb(29,29,29) 50%);
+    background: linear-gradient(90deg, #e6e0e0 50%, rgb(29, 29, 29) 50%);
 }
+
+.num-theme:nth-child(4) {
+    background: linear-gradient(90deg, #e0b1cb 50%, #231942 50%);
+}
+
+.num-theme:nth-child(5) {
+    background: linear-gradient(90deg, #212529 50%, #f8f9fa 50%);
+}
+
+.num-theme:nth-child(9) {
+    background: url(../resources/gallery.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .wrap-themes {
     flex-wrap: wrap;
     gap: var(--gap15);
@@ -713,15 +806,16 @@ body {
     gap: var(--gap15);
     height: var(--elheight);
 }
-.form-content
-{
-        height: var(--allscreen);
-        width: 100%;
-        display: flex;
-        position: relative;
-        background-color: var(--left-panel);
-        overflow: hidden;
+
+.form-content {
+    height: var(--allscreen);
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-color: var(--left-panel);
+    overflow: hidden;
 }
+
 .form-block {
     position: absolute;
     top: 50%;
@@ -796,12 +890,12 @@ body {
     width: 96px;
 }
 
-.log{
-    color:var(--font);
+.log {
+    color: var(--font);
     font-size: var(--font24);
 }
 
-.form-link{
+.form-link {
     text-decoration: none;
     color: var(--font);
     border-bottom: 1px solid var(--stroke);
@@ -892,12 +986,16 @@ body {
 
     .bottom-menu {
         display: flex;
-        width: 100%;
+        width: calc(100% - 20px);
+        padding: 0px 10px 0px 10px;
         height: 8vmax;
         margin-top: auto;
         flex-shrink: 0;
         position: sticky;
         bottom: 0px;
+        backdrop-filter: blur(3px);
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: var(--radius10);
     }
 
     .row-comment {
@@ -952,7 +1050,7 @@ body {
         width: calc(var(--elheight) * 4.5);
     }
 
-    .form-link{
+    .form-link {
         font-size: var(--font16);
         text-align: center;
         width: 70%;
@@ -982,23 +1080,29 @@ body {
         --elheight: 30px;
         --elheightform: 20px;
     }
+
     .edit-menu {
         height: calc(var(--elheight) * 8);
     }
+
     .login-form input {
         height: var(--elheightform);
         width: 70%;
     }
+
     .form-block {
         height: 80%;
         width: 60%;
     }
+
     .login-form {
         gap: var(--gap15);
     }
-    .log{
+
+    .log {
         font-size: var(--font24);
     }
+
     .account-btn {
         height: var(--elheight);
         width: calc(var(--elheight) * 2);
