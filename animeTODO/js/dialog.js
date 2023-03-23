@@ -68,7 +68,10 @@ export function addNewList() {
 export function addNewPoint() {
     let point_lists = document.getElementById('lists');
     let PointName = document.getElementById('info-field').value;
-    let listName = document.getElementById('list-name').textContent;
+    let listName = document.getElementById('list-name').innerText;
+    if (listName.search('/n') != -1){
+        listName.replace('/n', '');
+    }
     if (PointName != '') {
         point_lists.insertAdjacentHTML('beforeend', `<div class="display-row-cent-spbetw point-row">
                                                         <div class="white-btn row-name"><input type="text" name="point-name" value="${PointName}" id="point-name" readonly></div>
