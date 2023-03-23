@@ -69,8 +69,8 @@ export function addNewPoint() {
     let point_lists = document.getElementById('lists');
     let PointName = document.getElementById('info-field').value;
     let listName = document.getElementById('list-name').innerText;
-    if (listName.search('/n') != -1){
-        listName.replace('/n', '');
+    if (listName.search('\n') != -1){
+        listName.replace('\n', '');
     }
     if (PointName != '') {
         point_lists.insertAdjacentHTML('beforeend', `<div class="display-row-cent-spbetw point-row">
