@@ -993,8 +993,7 @@ body {
         flex-shrink: 0;
         position: sticky;
         bottom: 0px;
-        backdrop-filter: blur(3px);
-        background-color: rgba(0, 0, 0, .5);
+        background-color: var(--right-panel);
         border-radius: var(--radius10);
     }
 
