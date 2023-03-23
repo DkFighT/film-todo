@@ -108,6 +108,7 @@ mobile_search.onclick = () => {
     let mobile_input = document.getElementById('mobile-search-form');
     mobile_search.classList.add('active-search');
     mobile_input.style.width = '35vmin';
+    setTimeout(() => { mobile_input.focus(); }, 500);
     mobile_input.addEventListener('focusout', () => {
         mobile_input.style.width = '0';
         mobile_input.removeAttribute('autofocus');
