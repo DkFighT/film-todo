@@ -2,7 +2,8 @@ import * as th from './themes.js';
 import * as reqest from './request.js';
 import * as dialog from './dialog.js';
 import * as load from './load.js';
-import * as search from './search.js'
+import * as search from './search.js';
+import * as sort from './sort.js';
 
 document.getElementById('lists').onclick = () => { th.rem(); }
 // выбор темы
@@ -113,6 +114,10 @@ window.addEventListener('resize', () => {
 search.mobileAnim();
 search.deskSearch();
 search.mobileSearch();
+
+document.getElementById('sort').onclick = () => {
+    sort.reverseSort();
+}
 
 document.getElementById('rename').onclick = () => {
     dialog.dialogWindow('Измените название листа', dialog.editListName, dialog.cancel);
