@@ -7,7 +7,6 @@ export function reverseSort(){
     values.forEach(val => {
         point_values.push(val.value);
     });
-    console.log(point_values);
     if (!flag){
         document.getElementById("sort").textContent = 'Sort by time';
         let arr = point_values.sort();

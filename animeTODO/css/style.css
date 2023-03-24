@@ -303,15 +303,20 @@ body {
 .none-active-point {
     width: 70%;
     min-height: var(--elheight);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    
     background-color: var(--notactive);
     position: relative;
     border-radius: 0 var(--radius10) var(--radius10) 0;
     box-shadow: var(--shadow1);
     transition: all .1s ease-in-out;
     color: var(--font);
+}
+.none-active-point span{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .active-point {

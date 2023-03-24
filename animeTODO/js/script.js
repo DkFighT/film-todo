@@ -4,6 +4,7 @@ import * as dialog from './dialog.js';
 import * as load from './load.js';
 import * as search from './search.js';
 import * as sort from './sort.js';
+import * as edit from './edit.js';
 
 document.getElementById('lists').onclick = () => { th.rem(); }
 // выбор темы
@@ -114,15 +115,31 @@ window.addEventListener('resize', () => {
 search.mobileAnim();
 search.deskSearch();
 search.mobileSearch();
-
+// Сортировка
 document.getElementById('sort').onclick = () => {
     sort.reverseSort();
 }
-
+// переименовать лист
 document.getElementById('rename').onclick = () => {
     dialog.dialogWindow('Измените название листа', dialog.editListName, dialog.cancel);
 }
-
+// удалить лист
 document.getElementById('del').onclick = () => {
     dialog.deleteList();
+}
+// изменить оценку
+export function findScores() {
+    document.querySelectorAll('#score').forEach(element => {
+        element.addEventListener('change',() => {
+            edit.editScore(element);
+        })
+    });
+}
+// Изменить статус
+export function findStatus() {
+    document.querySelectorAll('#status').forEach(element => {
+        element.addEventListener('change',() => {
+            edit.editStatus(element);
+        })
+    });
 }

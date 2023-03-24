@@ -1,5 +1,5 @@
 import * as reqest from './request.js';
-import { checkMenu, user_id } from './script.js';
+import { checkMenu, user_id, findScores, findStatus } from './script.js';
 
 export function loadlists() {
     reqest.getRequest(reqest.bd_url + `/${user_id}`).then(resp => {
@@ -71,5 +71,7 @@ export function loadpoints() {
                 break;
             }
         }
+        findScores();
+        findStatus();
     });
 }

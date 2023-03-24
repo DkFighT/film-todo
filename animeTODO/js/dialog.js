@@ -1,4 +1,4 @@
-import { checkMenu, user_id } from './script.js';
+import { checkMenu, findScores, findStatus, user_id } from './script.js';
 import * as reqest from './request.js';
 // import { json } from 'stream/consumers';
 
@@ -100,6 +100,8 @@ export function addNewPoint() {
                                                         </div>
                                                     </div>`);
         checkMenu();
+        findScores();
+        findStatus();
         // обращение к бд и запись нового поинта в бд  (я рот ее ебал)
         reqest.getRequest(reqest.bd_url + `/${user_id}`).then(resp => {
             let all_data;
