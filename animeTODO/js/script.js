@@ -113,3 +113,11 @@ window.addEventListener('resize', () => {
 search.mobileAnim();
 search.deskSearch();
 search.mobileSearch();
+
+document.getElementById('rename').onclick = () => {
+    dialog.dialogWindow('Измените название листа', dialog.editListName, dialog.cancel);
+}
+
+document.getElementById('del').onclick = () => {
+    dialog.deleteList();
+}
