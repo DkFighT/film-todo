@@ -1,9 +1,13 @@
 import * as reqest from './request.js';
-import { checkMenu, user_id, findScores, findStatus } from './script.js';
+import { checkMenu, user_id, findScores, findStatus, findComment } from './script.js';
 
 export function loadlists() {
     reqest.getRequest(reqest.bd_url + `/${user_id}`).then(resp => {
         let menu_lists = document.getElementById('menu');
+        let login = document.querySelectorAll('.font-bold-24');
+        login.forEach(element => {
+            element.textContent = resp['name'];
+        })
         menu_lists.innerHTML = '';
         for (let i = 0; i < resp['lists'].length; i++) {
             menu_lists.insertAdjacentHTML('beforeend', `<div class="display-row-cent-center none-active-point">
@@ -26,6 +30,7 @@ export function loadlists() {
         });
         checkMenu();
         loadpoints();
+        
     });
 
 }
@@ -41,8 +46,8 @@ export function loadpoints() {
                 for (let j = 0; j < resp['lists'][i]['data'].length; j++) {
 
                     pointField.insertAdjacentHTML('beforeend', `<div class="display-row-cent-spbetw point-row">
-                <div class="white-btn row-name"><input type="text" name="point-name" value="${resp['lists'][i]['data'][j]['name']}" id="point-name" readonly></div>
-                <div class="white-btn row-comment"></div>
+                <div class="white-btn row-name"><input type="text" name="point-name" value="${resp['lists'][i]['data'][j]['name']}" id="point-name" readonly><div class="white-btn row-comment"></div></div>
+                
                 <div class="white-btn row-score"><select name="score" id="score" class="score">
                         <option value="10">10</option>
                         <option value="9">9</option>
@@ -73,5 +78,6 @@ export function loadpoints() {
         }
         findScores();
         findStatus();
+        findComment();
     });
 }

@@ -1,4 +1,6 @@
 // получить запрос с сервера
+export let bd_url = 'https://64022bef302b5d671c34bef5.mockapi.io/api/v1/film';
+
 export function getRequest(url) {
     return fetch(url).then(response => { return response.json(); })
 }
@@ -12,5 +14,3 @@ export function sendRequest(url, method, body) {
         body: JSON.stringify(body)
     });
 }
-
-export let bd_url = 'https://64022bef302b5d671c34bef5.mockapi.io/api/v1/film';

@@ -1,6 +1,5 @@
 import { checkMenu, findScores, findStatus, user_id } from './script.js';
 import * as reqest from './request.js';
-// import { json } from 'stream/consumers';
 
 // Создание окна
 export function dialogWindow(text, btnfunc, exit) {
@@ -83,7 +82,7 @@ export function addNewPoint() {
                                                                 <option value="8">8</option>
                                                                 <option value="7">7</option>
                                                                 <option value="6">6</option>
-                                                                <option value="5">5</option>
+                                                                <option value="5" selected>5</option>
                                                                 <option value="4">4</option>
                                                                 <option value="3">3</option>
                                                                 <option value="2">2</option>
@@ -91,7 +90,7 @@ export function addNewPoint() {
                                                             </select></div>
                                                         <div class="white-btn row-status">
                                                             <select name="status" id="status" class="score">
-                                                                <option value="буду">В планах</option>
+                                                                <option value="буду" selected>В планах</option>
                                                                 <option value="смотрю">Смотрю</option>
                                                                 <option value="оконченно">Закончил</option>
                                                                 <option value="хз">Хз</option>
@@ -116,7 +115,7 @@ export function addNewPoint() {
             let body = {
                 data: [{
                     name: PointName,
-                    score: 10,
+                    score: 5,
                     comment: '',
                     status: '0'
                 }]

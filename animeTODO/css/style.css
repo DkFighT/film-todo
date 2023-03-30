@@ -94,7 +94,7 @@ html.theme-3 {
     /*Строка с названием аниме, коментом и тд + поиск для компьютерной версии*/
     --font: #e6e0e0;
     /*Шрифт главной панели*/
-    --stroke: #5c1b1b;
+    --stroke: #e1d1d1;
     /*Подчеркивание в главной и боковой панели + мобилке*/
     --name: #ffffff;
     /*Название приложения  + название списка в главной области*/
@@ -495,6 +495,7 @@ body {
     text-overflow: ellipsis;
     white-space: nowrap;
     background-color: var(--point);
+    display: flex;
 }
 
 .row-name input {
@@ -515,13 +516,16 @@ body {
 }
 
 .row-comment {
-    width: var(--elheight);
-    height: var(--elheight);
+    min-width: var(--elheight);
+    min-height: var(--elheight);
+    max-width: var(--elheight);
+    max-height: var(--elheight);
     background: var(--commentimg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80%;
     background-color: var(--point);
+    
 }
 
 .row-score {
@@ -839,6 +843,52 @@ body {
     background-color: var(--right-panel);
 }
 
+.comment-field{
+    height: 100%;
+    width: 100%;
+    background-color: var(--left-panel);
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    border-radius: var(--radius10);
+    display: none;
+}
+.point-name-point{
+    width: calc(100% - 2 * var(--gap15));
+    height: 30%;
+}
+.comment-field-comment{
+    width: calc(100% - 2 * var(--gap15));
+    height: 60%;
+}
+textarea{
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    color: var(--font);
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: var(--font16);
+}
+.save-comm{
+    width: 30%;
+    margin-right: var(--gap15);
+    align-self: flex-end;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
 .login-form {
     height: auto;
     width: 90%;
@@ -885,7 +935,6 @@ body {
 }
 
 .account-btn {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -905,6 +954,124 @@ body {
     text-decoration: none;
     color: var(--font);
     border-bottom: 1px solid var(--stroke);
+}
+.profile{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 95%;
+    height: calc(var(--allscreen) - 4vmax);
+    gap: var(--gap15);
+    overflow: auto;
+    z-index: 60;
+    top: 2vmax;
+    background-color: var(--left-panel);
+    border-radius: 20px;
+    left: 2.5%;
+    overflow: hidden;
+}
+
+.profile-content{
+    display: flex;
+    height: 100%;
+    width: calc(100% - 80px);
+    gap: 40px;
+}
+
+.ava-img-profile {
+    margin-top: 20px;
+    min-height: 8rem;
+    min-width: 8rem;
+    max-height: 8rem;
+    max-width: 8rem;
+    border-radius: 50%;
+    background-color: var(--ava);
+    background-image: url(../resources/user1.png);
+}
+
+.progfile-name-ava {
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dashboard{
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.friends{
+    width: 50%;
+    height: calc(100% - 40px);
+    overflow-y: auto;
+}
+
+.stats{
+    width: 50%;
+    height: auto;
+    overflow-y: auto;
+}
+
+.count_list{
+    border-radius: 50%;
+    border: 1px solid var(--stroke);
+    width: 13vmax;
+    height: 13vmax;
+}
+
+.h2-profile{
+    display: flex;
+    width: calc(100% - 80px);
+    height: 10%;
+    justify-content: space-around;
+    color: var(--font);
+    font-size: 26px;
+}
+#sort{
+    width: 100%;
+}
+
+.dash{
+    min-height: 9vmax;
+    max-width: 11vmax;
+    max-width: 15vmax;
+    max-height: 17vmax;
+    gap: 5px;
+}
+.profile-txt{
+    font-size: 22px;
+    color: var(--font);
+    width: auto;
+    font-weight: bolder;
+}
+.close{
+    position: absolute;
+    top: 1.5%;
+    right: 1%;
+    width: 40px;
+    height: 40px;
+    background: url(../resources/close.png);
+    background-size: cover;
+}
+.sign_out{
+    width: 24px;
+    height: 24px;
+    background: url(../resources/log-out.png);
+    background-size: cover;
+}
+.out{
+    display: flex;
+    gap:5px;
+    position: absolute;
+    bottom: 2.5%;
+    right: 1%;
+    font-size: 24px;
+    line-height: 24px;
+    color: red;
 }
 
 @media screen and (orientation: portrait) {
@@ -1004,7 +1171,6 @@ body {
     }
 
     .row-comment {
-        display: none;
         box-shadow: none;
     }
 
@@ -1077,6 +1243,97 @@ body {
     .account-btn {
         height: var(--elheight);
         width: calc(var(--elheight) * 2);
+    }
+    .profile-name-ava{
+        height: 25%;
+    }
+    .profile{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        width: 95%;
+        height: calc(var(--allscreen) - 4vmax);
+        gap: 10px;
+        overflow: hidden;
+        z-index: 60;
+        top: 2vmax;
+        background-color: var(--left-panel);
+        border-radius: 20px;
+        left: 2.5%;
+    }
+    .ava-img-profile{
+        margin-top: 20px;
+        min-height: 8rem;
+        min-width: 8rem;
+        max-height: 8rem;
+        max-width: 8rem;
+    }
+    .dashboard{
+        width: 50%;
+        height: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .count_list{
+        align-self: center;
+        border-radius: 50%;
+        border: 1px solid var(--stroke);
+        width: 9vmax;
+        height: 9vmax;
+    }
+    .dash{
+        width: 11vmax;
+        height: 12vmax;
+        min-height: 8vmax;
+        max-width: 9vmax;
+        gap: 5px;
+    }
+    .friends{
+        width: 45%;
+        height: calc(100% - 40px);
+    }
+    
+    .stats{
+        width: 45%;
+        height: calc(100% - 40px);
+    }
+    .profile-txt{
+        font-size: var(--font16);
+        color: var(--font);
+        width: auto;
+        font-weight: bolder;
+    }
+    .h2-profile{
+        font-size: var(--font16);
+        width: calc(100% - 40px);
+    }
+    .profile-content{
+        width: calc(100% - 40px);
+    }
+    .close{
+        position: absolute;
+        top: 1.5%;
+        right: 2%;
+        width: 32px;
+        height: 32px;
+        background: url(../resources/close.png);
+    }
+    .sign_out{
+        width: 16px;
+        height: 16px;
+        background: url(../resources/log-out.png);
+        background-size: cover;
+    }
+    .out{
+        display: flex;
+        gap:5px;
+        position: absolute;
+        bottom: 1.5%;
+        right: 2%;
+        font-size: 16px;
+        line-height: 16px;
+        color: red;
     }
 }
 
