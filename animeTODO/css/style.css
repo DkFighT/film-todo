@@ -146,13 +146,13 @@ html.theme-4 {
     /*Бг не выделенного списка + шрифт не выделенного списка*/
     --list: #9f86c0;
     /*Выделение дива на мобилке*/
-    --searchimg: url(../resources/search2.png);
-    --commentimg: url(../resources/comment2.png);
-    --optionimg: url(../resources/option2.png);
-    --shareimg: url(../resources/share2.png);
-    --userimg: url(../resources/user2.png);
-    --editimg: url(../resources/edit2.png);
-    --sortimg: url(../resources/sort2.png);
+    --searchimg: url(../resources/search4.png);
+    --commentimg: url(../resources/comment4.png);
+    --optionimg: url(../resources/option4.png);
+    --shareimg: url(../resources/share4.png);
+    --userimg: url(../resources/user4.png);
+    --editimg: url(../resources/edit4.png);
+    --sortimg: url(../resources/sort4.png);
 }
 
 html.theme-5 {
@@ -303,7 +303,7 @@ body {
 .none-active-point {
     width: 70%;
     min-height: var(--elheight);
-    
+
     background-color: var(--notactive);
     position: relative;
     border-radius: 0 var(--radius10) var(--radius10) 0;
@@ -311,7 +311,8 @@ body {
     transition: all .1s ease-in-out;
     color: var(--font);
 }
-.none-active-point span{
+
+.none-active-point span {
     width: 100%;
     text-align: center;
     overflow: hidden;
@@ -525,7 +526,7 @@ body {
     background-repeat: no-repeat;
     background-size: 80%;
     background-color: var(--point);
-    
+
 }
 
 .row-score {
@@ -626,7 +627,6 @@ body {
 .search-bottom input {
     height: calc(100%);
     width: 0;
-    /* 35vmin; */
     position: absolute;
     top: 0;
     left: -35vmin;
@@ -770,8 +770,6 @@ body {
     color: rgb(235, 102, 102);
 }
 
-/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
 /* DIAlog WINDOW */
 .dialog {
     height: 100%;
@@ -843,7 +841,7 @@ body {
     background-color: var(--right-panel);
 }
 
-.comment-field{
+.comment-field {
     height: 100%;
     width: 100%;
     background-color: var(--left-panel);
@@ -854,15 +852,18 @@ body {
     border-radius: var(--radius10);
     display: none;
 }
-.point-name-point{
+
+.point-name-point {
     width: calc(100% - 2 * var(--gap15));
     height: 30%;
 }
-.comment-field-comment{
+
+.comment-field-comment {
     width: calc(100% - 2 * var(--gap15));
     height: 60%;
 }
-textarea{
+
+textarea {
     min-height: 100%;
     min-width: 100%;
     max-height: 100%;
@@ -874,11 +875,13 @@ textarea{
     box-sizing: border-box;
     font-size: var(--font16);
 }
-.save-comm{
+
+.save-comm {
     width: 30%;
     margin-right: var(--gap15);
     align-self: flex-end;
 }
+
 @keyframes appear {
     from {
         opacity: 0;
@@ -955,7 +958,8 @@ textarea{
     color: var(--font);
     border-bottom: 1px solid var(--stroke);
 }
-.profile{
+
+.profile {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -972,7 +976,7 @@ textarea{
     overflow: hidden;
 }
 
-.profile-content{
+.profile-content {
     display: flex;
     height: 100%;
     width: calc(100% - 80px);
@@ -997,33 +1001,35 @@ textarea{
     flex-wrap: wrap;
 }
 
-.dashboard{
+.dashboard {
     width: 100%;
     height: auto;
     flex-wrap: wrap;
     gap: 40px;
 }
 
-.friends{
+.friends {
     width: 50%;
     height: calc(100% - 40px);
     overflow-y: auto;
 }
 
-.stats{
+.stats {
     width: 50%;
     height: auto;
     overflow-y: auto;
 }
 
-.count_list{
+.count_list {
     border-radius: 50%;
     border: 1px solid var(--stroke);
-    width: 13vmax;
-    height: 13vmax;
+    min-width: 13vmax;
+    min-height: 13vmax;
+    max-width: 13vmax;
+    max-height: 13vmax;
 }
 
-.h2-profile{
+.h2-profile {
     display: flex;
     width: calc(100% - 80px);
     height: 10%;
@@ -1031,24 +1037,27 @@ textarea{
     color: var(--font);
     font-size: 26px;
 }
-#sort{
+
+#sort {
     width: 100%;
 }
 
-.dash{
+.dash {
     min-height: 9vmax;
     max-width: 11vmax;
     max-width: 15vmax;
     max-height: 17vmax;
     gap: 5px;
 }
-.profile-txt{
+
+.profile-txt {
     font-size: 22px;
     color: var(--font);
     width: auto;
     font-weight: bolder;
 }
-.close{
+
+.close {
     position: absolute;
     top: 1.5%;
     right: 1%;
@@ -1057,15 +1066,17 @@ textarea{
     background: url(../resources/close.png);
     background-size: cover;
 }
-.sign_out{
+
+.sign_out {
     width: 24px;
     height: 24px;
     background: url(../resources/log-out.png);
     background-size: cover;
 }
-.out{
+
+.out {
     display: flex;
-    gap:5px;
+    gap: 5px;
     position: absolute;
     bottom: 2.5%;
     right: 1%;
@@ -1079,6 +1090,10 @@ textarea{
         --elheight: 5vmax;
         --font16: 2vmax;
         --font24: 3vmax;
+    }
+
+    .font-col-1 {
+        color: var(--stroke);
     }
 
     .dialog-frame {
@@ -1244,10 +1259,12 @@ textarea{
         height: var(--elheight);
         width: calc(var(--elheight) * 2);
     }
-    .profile-name-ava{
+
+    .profile-name-ava {
         height: 25%;
     }
-    .profile{
+
+    .profile {
         display: none;
         flex-direction: column;
         align-items: center;
@@ -1262,56 +1279,67 @@ textarea{
         border-radius: 20px;
         left: 2.5%;
     }
-    .ava-img-profile{
+
+    .ava-img-profile {
         margin-top: 20px;
-        min-height: 8rem;
-        min-width: 8rem;
-        max-height: 8rem;
-        max-width: 8rem;
+        min-height: 6rem;
+        min-width: 6rem;
+        max-height: 6rem;
+        max-width: 6rem;
     }
-    .dashboard{
+
+    .dashboard {
         width: 50%;
         height: 100%;
         flex-wrap: wrap;
         gap: 10px;
     }
-    .count_list{
+
+    .count_list {
         align-self: center;
         border-radius: 50%;
         border: 1px solid var(--stroke);
-        width: 9vmax;
-        height: 9vmax;
+        min-width: 9vmax;
+        min-height: 9vmax;
+        max-width: 9vmax;
+        max-height: 9vmax;
     }
-    .dash{
+
+    .dash {
         width: 11vmax;
         height: 12vmax;
         min-height: 8vmax;
         max-width: 9vmax;
         gap: 5px;
     }
-    .friends{
+
+    .friends {
         width: 45%;
         height: calc(100% - 40px);
     }
-    
-    .stats{
+
+    .stats {
         width: 45%;
         height: calc(100% - 40px);
     }
-    .profile-txt{
+
+    .profile-txt {
         font-size: var(--font16);
         color: var(--font);
         width: auto;
         font-weight: bolder;
     }
-    .h2-profile{
+
+    .h2-profile {
         font-size: var(--font16);
         width: calc(100% - 40px);
     }
-    .profile-content{
+
+    .profile-content {
         width: calc(100% - 40px);
     }
-    .close{
+
+    .close {
         position: absolute;
         top: 1.5%;
         right: 2%;
@@ -1319,15 +1347,17 @@ textarea{
         height: 32px;
         background: url(../resources/close.png);
     }
-    .sign_out{
+
+    .sign_out {
         width: 16px;
         height: 16px;
         background: url(../resources/log-out.png);
         background-size: cover;
     }
-    .out{
+
+    .out {
         display: flex;
-        gap:5px;
+        gap: 5px;
         position: absolute;
         bottom: 1.5%;
         right: 2%;
